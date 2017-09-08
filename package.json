@@ -1,9 +1,10 @@
 {
+  "name": "cssimply",
   "name": "simply",
   "version": "1.0.0",
   "description": "lightweight css framework",
   "main": "lib/index.css",
-  "author": "Francesco Agnoletto",
+  "author": "Francesco Agnoletto <francesco.agnoletto92@gmail.com> (https://twitter.com/Fragno92)",
   "license": "MIT",
   "scripts": {
     "build": "webpack"
