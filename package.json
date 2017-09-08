@@ -2,7 +2,7 @@
   "name": "simply",
   "version": "1.0.0",
   "description": "lightweight css framework",
-  "main": "index.js",
+  "main": "lib/index.css",
   "author": "Francesco Agnoletto",
   "license": "MIT",
   "scripts": {
