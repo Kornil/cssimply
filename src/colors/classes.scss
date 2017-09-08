@@ -1,0 +1,58 @@
+// colors from https://flatuicolors.com/
+
+@import "variables";
+
+// Maps for values and properties
+
+$color-map: (
+
+  "black":          $black,
+  "white":          $white,
+  "turquoise":      $turquoise,
+  "green-sea":      $green-sea,
+  "emerald":        $emerald,
+  "nephritis":      $nephritis,
+  "peter-river":    $peter-river,
+  "belize-hole":    $belize-hole,
+  "amethyst":       $amethyst,
+  "wisteria":       $wisteria,
+  "wet-asphalt":    $wet-asphalt,
+  "midnight-blue":  $midnight-blue,
+  "sun-flower":     $sun-flower,
+  "orange":         $orange,
+  "carrot":         $carrot,
+  "pumpkin":        $pumpkin,
+  "alizarin":       $alizarin,
+  "pomegranate":    $pomegranate,
+  "clouds":         $clouds,
+  "silver":         $silver,
+  "concrete":       $concrete,
+  "asbestos":       $asbestos,
+
+) !default;
+
+$color-helpers: (
+
+  "text": "color",
+  "bg":   "background-color",
+  "br":   "border-color",
+
+) !default;
+
+
+// Loop over the helpers in $helpers
+@each $alias, $property in $color-helpers {
+
+    // Loop over spacing values in $spacing-map
+    @each $key, $value in $color-map {
+
+        // Create a new class
+        .#{$alias}--#{$key} {
+
+            #{$property}: $value;
+
+        }
+
+    }
+
+}
