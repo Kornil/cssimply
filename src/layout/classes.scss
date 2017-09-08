@@ -20,18 +20,49 @@
 .circle {border-radius: 50%}
 
 .grid {
-    height: 100vh;
     display: grid;
     grid-gap: $spacing-1;
-    grid-template-columns: 0.25fr 0.75fr;	
-    grid-template-rows: 0.10fr .80fr 0.10fr;
-    grid-template-areas: 
-    "header header"
-    "sidebar main"
-    "footer footer";
+    grid-template-columns: repeat(12, 1fr);	
+    grid-auto-rows: minmax($spacing-5, auto);
 }
 
-.header { grid-area: header; }
-.sidebar { grid-area: sidebar; }
-.main { grid-area: main; }
-.footer { grid-area: footer; }
+$grid-map: (
+    
+      "1":      1,
+      "2":      2,
+      "3":      3,
+      "4":      4,
+      "5":      5,
+      "6":      6,
+      "7":      7,
+      "8":      8,
+      "9":      9,
+      "10":     10,
+      "11":     11,
+      "12":     12
+    
+    ) !default;
+    
+    $grid-helpers: (
+    
+      "col":    "grid-column-end",
+    
+    ) !default;
+    
+    
+    // Loop over the helpers in $helpers
+    @each $alias, $property in $grid-helpers {
+    
+        // Loop over spacing values in $spacing-map
+        @each $key, $value in $grid-map {
+    
+            // Create a new class
+            .#{$alias}-#{$key} {
+    
+                #{$property}: span $value;
+
+            }
+    
+        }
+    
+    }
