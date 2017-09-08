@@ -1,0 +1,37 @@
+// positions
+.relative {position: relative}
+.absolute {position: absolute}
+.fixed {position: fixed}
+.static {position: static}
+
+// element on the page but not visible
+.hidden {visibility: hidden}
+
+//
+.ds--none {display: none}
+.ds--inline {display: inline}
+.ds--inline-block {display: inline-block}
+
+.pull-left {float: left}
+.pull-right {float: right}
+.clear {clear: both}
+
+.rounded {border-radius: $spacing-half}
+.circle {border-radius: 50%}
+
+.grid {
+    height: 100vh;
+    display: grid;
+    grid-gap: $spacing-1;
+    grid-template-columns: 0.25fr 0.75fr;	
+    grid-template-rows: 0.10fr .80fr 0.10fr;
+    grid-template-areas: 
+    "header header"
+    "sidebar main"
+    "footer footer";
+}
+
+.header { grid-area: header; }
+.sidebar { grid-area: sidebar; }
+.main { grid-area: main; }
+.footer { grid-area: footer; }
