@@ -1,0 +1,94 @@
+// function borrowed from https://github.com/teodragovic follow him he's a great guy.
+
+@import "variables";
+
+/**
+ *
+ * Utility spacing classes for setting margin and padding
+ *
+ * Classes are generated using Sass maps and loop functions.
+ * Use `$spacing-map` to add or remove spacing values.
+ * See output here: https://www.sassmeister.com/gist/3f536e407ec9e480a1f64349aba5497c
+ *
+ * These classes have `!important` flag used proactively to force immutability,
+ * meaning these classes will always trump any component-based styles.
+ * As any utility class, use them only when sure that colors need to stay the
+ * same under all circumstances (diffrent viewports, hover states...).
+ *
+ */
+
+
+// Maps for values and properties
+
+$spacing-map: (
+
+  "0":    0,
+  "1":    $spacing-1,
+  "2":    $spacing-2,
+  "3":    $spacing-3,
+  "4":    $spacing-4,
+  "5":    $spacing-5,
+  "6":    $spacing-6,
+  "7":    $spacing-7,
+  "10":   $spacing-10,
+  "14":   $spacing-14,
+
+  "half": $spacing-half,
+  
+  "m1":   $spacing-m1,
+  "m2":   $spacing-m2,
+  "m3":   $spacing-m3,
+
+) !default;
+
+$spacing-helpers: (
+
+  "m":    "margin",
+  "mt":   "margin-top",
+  "mr":   "margin-right",
+  "mb":   "margin-bottom",
+  "ml":   "margin-left",
+  "mh":   "margin-right" "margin-left",
+  "mv":   "margin-top" "margin-bottom",
+
+  "p":    "padding",
+  "pt":   "padding-top",
+  "pr":   "padding-right",
+  "pb":   "padding-bottom",
+  "pl":   "padding-left",
+  "ph":   "padding-right" "padding-left",
+  "pv":   "padding-top" "padding-bottom",
+
+  "left": "left",
+  "bottom": "bottom",
+  "top": "top",
+  "right": "right"
+
+) !default;
+
+
+// Loop over the helpers in $helpers
+@each $alias, $property in $spacing-helpers {
+
+    // Loop over spacing values in $spacing-map
+    @each $key, $value in $spacing-map {
+
+        // Create a new class
+        .#{$alias}--#{$key} {
+
+            // If helper contains several properties, loop over them
+            @if length($property) > 1 {
+                @each $prop in $property {
+                    #{$prop}: $value;
+                }
+            }
+
+            // If helper is a single property, output it
+            @else {
+                #{$property}: $value;
+            }
+        }
+
+    }
+
+}
