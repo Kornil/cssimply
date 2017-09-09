@@ -29,12 +29,12 @@ This first implementation is divided into 4 main parts:
 
 
 
-##Reset
+## Reset
 contains a small reset to make all browsers output the same default style, nothing worth mentioning, the style is attached to the base html elements.
 
 
 
-##Spacings
+## Spacings
 contains padding and margin classes, the base value is 8 and every other value used is multiplicative of this base value (or divided from this).
 
 
@@ -91,7 +91,7 @@ padding-bottom: 4px;
 
 
 
-##Colors
+## Colors
 
 Colors come from https://flatuicolors.com/ there isn't much to say for now.
 
