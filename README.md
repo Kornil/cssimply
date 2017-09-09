@@ -42,40 +42,42 @@ contains padding and margin classes, the base value is 8 and every other value u
 
 All variables in /spacings are values in px, multiplicative starting from 8px
 
-***$spacing-1*** 8px
-***$spacing-2*** 16px
+- ***$spacing-1*** 8px
+- ***$spacing-2*** 16px
 
 and so on for ***4***, ***5***, ***6***, ***7***, ***10***, ***14***, special mentions:
 
-***$spacing-half*** 4px
-***$spacing-m1*** -8px
-***$spacing-m2*** -16px
-***$spacing-m3*** -24px
+- ***$spacing-half*** 4px
+- ***$spacing-m1*** -8px
+- ***$spacing-m2*** -16px
+- ***$spacing-m3*** -24px
 
 
 ### classes
 
 **prefixes**
 
-***m--*** margin
-***mt--*** margin-top
-***mb--*** margin-bottom
-***ml--*** margin-left
-***mr--*** margin-right
-***mv--*** margin-top margin-bottom
-***mh--*** margin-left margin-right
+- ***m--*** margin
+- ***mt--*** margin-top
+- ***mb--*** margin-bottom
+- ***ml--*** margin-left
+- ***mr--*** margin-right
+- ***mv--*** margin-top margin-bottom
+- ***mh--*** margin-left margin-right
 
 paddings works the same exact way using ***p*** instead of ***m***
 
 **suffixes**
 
-***0*** 0px
-***1*** 8px
-***2*** 16px
+- ***0*** 0px
+- ***1*** 8px
+- ***2*** 16px
+
 You know the drill, other numbers available are ***3***, ***4***, ***5***, ***6***, ***7***, ***10***, ***14***.
 Other special suffixes are:
-***half*** 4px
-***m1***, ***m2***, ***m3*** are also available for -8px, -16px and -24px
+
+- ***half*** 4px
+- ***m1***, ***m2***, ***m3*** are also available for -8px, -16px and -24px
 
 ```
 // example
@@ -100,7 +102,7 @@ Colors come from https://flatuicolors.com/ there isn't much to say for now.
 
 varibale names are the same on the website lowercase and `lisp-case`.
 
-***$peter-river*** #3498db
+- ***$peter-river*** #3498db
 
 you can imagine the rest, special mention ***$black*** and ***$white***, try to guess these too.
 
@@ -112,9 +114,9 @@ you can imagine the rest, special mention ***$black*** and ***$white***, try to 
 
 only 3 prefixes:
 
-***text--*** for color
-***bg--*** background-color
-***br--*** border-color
+- ***text--*** for color
+- ***bg--*** background-color
+- ***br--*** border-color
 
 
 **suffixes**
@@ -142,26 +144,27 @@ This section does not have variables, only classes
 
 Most are self explanatory:
 
-***relative*** `position: relative`
-***absolute*** `position: absolute`
-together with ***fixed*** and ***static***
+- ***relative*** `position: relative`
+- ***absolute*** `position: absolute`
+- together with ***fixed*** and ***static***
 
-***hidden*** is `visibility: hidden`, DOES NOT include display: none
+- ***hidden*** is `visibility: hidden`, DOES NOT include display: none
 
 for display the classes start with
-***ds--*** plus the display value, ***ds-inline-block*** adds `display: inline-block`
 
-***clear***, ***pull-left***, ***pull-right*** are the same as bootstrap,
+- ***ds--*** plus the display value, ***ds-inline-block*** adds `display: inline-block`
+
+- ***clear***, ***pull-left***, ***pull-right*** are the same as bootstrap,
 `clear: both`, `float: left`, `float: right`.
 
-***br*** `border: 1px solid` apply colors with color classes
-***rounded*** `border-radius: 4px`
-***circle*** `border-radius: 50%`
+- ***br*** `border: 1px solid` apply colors with color classes
+- ***rounded*** `border-radius: 4px`
+- ***circle*** `border-radius: 50%`
 
 Lastly the grid system implemented using the new CSS Grid, uses a standard 12 column layout.
 
-***grid*** is the wrapper class required for using columns.
-from ***col-1*** to ***col-12*** all the column classes
+- ***grid*** is the wrapper class required for using columns.
+- from ***col-1*** to ***col-12*** all the column classes
 
 ```
 // example
