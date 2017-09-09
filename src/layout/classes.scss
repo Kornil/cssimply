@@ -19,7 +19,6 @@
 
 .rounded {border-radius: $spacing-half}
 .circle {border-radius: 50%}
-.br {border: 1px solid}
 
 .grid {
     display: grid;
@@ -27,6 +26,8 @@
     grid-template-columns: repeat(12, 1fr);	
     grid-auto-rows: minmax($spacing-5, auto);
 }
+
+[class^='col--'][class*='-center'] {justify-self: center}
 
 $grid-map: (
     
@@ -58,8 +59,8 @@ $grid-map: (
         // Loop over spacing values in $spacing-map
         @each $key, $value in $grid-map {
     
-            // Create a new class
-            .#{$alias}-#{$key} {
+            // Create a new prefix class
+            [class^="#{$alias}-#{$key}"] {
     
                 #{$property}: span $value;
 
