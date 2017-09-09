@@ -27,7 +27,8 @@
     grid-auto-rows: minmax($spacing-5, auto);
 }
 
-[class^='col--'][class*='-center'] {justify-self: center}
+[class^='col--'][class*='-center'],
+[class*=' col--'][class*='-center'] {justify-self: center}
 
 $grid-map: (
     
