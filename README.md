@@ -16,11 +16,22 @@ npm i -S cssimply
 yarn add cssimply
 ```
 
-and then import it on whatever JavaScript file you want, I suggest using a root file so every children will inherit the style from this package.
+TO GET ONLY THE CLASSES
 
-`import 'cssimply';` is all that is required, really simple.
+Import the dependency on whatever JavaScript file you want, I suggest using a root file so every children will inherit the style from this package.
 
-This will import a minified `css` file with all the needed classes to jumpstart you project.
+`import 'cssimply';` is all that is required, really simple, this will import a minified `css` file with all the needed classes to jumpstart you project.
+
+
+TO GET VARIABLES AND CLASSES
+
+You will need to have `scss` enabled on your project, from a `scss` file just add
+
+```
+@import '/path-to-root-folder/node_modules/cssimply/src/style.scss';`
+```
+
+this will give you all the classes and the scss variables explained below.
 
 
 # Sections
