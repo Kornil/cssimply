@@ -1,6 +1,6 @@
 {
   "name": "cssimply",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "lightweight css framework",
   "main": "lib/index.css",
   "author": "Francesco Agnoletto <francesco.agnoletto92@gmail.com> (https://twitter.com/Fragno92)",
